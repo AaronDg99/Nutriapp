@@ -34,7 +34,7 @@ const Home = () => {
   return (
     <div className="container-fluid">
       <Menu /> {/* Aquí estás utilizando el componente Menu */}
-      <h1 className="mt-4">Bienvenido a nuestro sitio web</h1>
+      <h1 className="mt-4" class="text-muted">Bienvenido a nuestro sitio web</h1>
       <div className="mb-3">
         <label className="form-label">Peso (en kg):</label>
         <input
