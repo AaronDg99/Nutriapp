@@ -39,12 +39,13 @@ function Login() {
                 console.log("response:");
                 console.log(response);
                 
-                const { name, token } = response.data.data;
+                const { name, token, id } = response.data.data;
                 console.log(name);
                 console.log(token);
                 Cookies.set("isLoggedIn", true);
                 Cookies.set("username", name);
                 Cookies.set("token", token);
+                Cookies.set("id_user", id)
                 navigate("/home");
                 swal("Iniciaste Sesión", "Haz iniciado sesión!", "success");
 
