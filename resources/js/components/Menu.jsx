@@ -6,16 +6,17 @@ import { json, Link, Outlet } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { useNavigate } from "react-router-dom";
+import Cookies from "js-cookie";
 
 function Menu() {
-  const isLoggedIn = localStorage.getItem("isLoggedIn");
-  const username = localStorage.getItem("username");
+  const isLoggedIn = Cookies.get("isLoggedIn");
+  const username = Cookies.get("username");
   const navigate = useNavigate();
 
   const logOut = () => {
-    localStorage.removeItem("isLoggedIn");
-    localStorage.removeItem("username");
-    localStorage.removeItem("token");
+    Cookies.remove("isLoggedIn");
+    Cookies.remove("username");
+    Cookies.remove("token");
     navigate("/login");
     swal("Sesión cerrada", "Haz cerrado sesión!", "success");
   };

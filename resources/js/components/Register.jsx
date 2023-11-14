@@ -6,6 +6,7 @@ import Form from "react-bootstrap/Form";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import swal from 'sweetalert';
+import Cookies from "js-cookie";
 
 
 function Register() {
@@ -48,8 +49,8 @@ function Register() {
                 console.log(response);
                 const { name } = response.data.data;
                 console.log(name);
-                localStorage.setItem("isLoggedIn", true);
-                localStorage.setItem("username", name);
+                Cookies.set("isLoggedIn", true);
+                Cookies.set("username", name);
                 navigate("/home");
                 swal("Registrado", "Te haz registrado!", "success");
             })

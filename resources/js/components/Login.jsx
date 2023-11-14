@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Card from "react-bootstrap/Card";
-
+import Cookies from "js-cookie";
 import swal from 'sweetalert';
 
 
@@ -42,9 +42,10 @@ function Login() {
                 const { name, token } = response.data.data;
                 console.log(name);
                 console.log(token);
-                localStorage.setItem("isLoggedIn", true);
-                localStorage.setItem("username", name);
-                localStorage.setItem("token", token);
+                Cookies.set("isLoggedIn", true);
+                Cookies.set("username", name);
+                Cookies.set("token", token);
+                Cookies.set("id_user", ID)
                 navigate("/home");
                 swal("Iniciaste Sesión", "Haz iniciado sesión!", "success");
 
