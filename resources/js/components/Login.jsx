@@ -45,7 +45,6 @@ function Login() {
                 Cookies.set("isLoggedIn", true);
                 Cookies.set("username", name);
                 Cookies.set("token", token);
-                Cookies.set("id_user", ID)
                 navigate("/home");
                 swal("Iniciaste Sesión", "Haz iniciado sesión!", "success");
 
