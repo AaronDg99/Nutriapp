@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Menu from './Menu'; // Asegúrate de que la ruta sea correcta según la ubicación de tu archivo Menu.jsx
 import Card from 'react-bootstrap/Card';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const Home = () => {
   const [weight, setWeight] = useState('');
@@ -33,7 +35,7 @@ const Home = () => {
 
   return (
     <div className="container-fluid">
-      <Menu /> {/* Aquí estás utilizando el componente Menu */}
+      <Menu /> 
       <h1 className="mt-4" class="text-muted">Bienvenido a nuestro sitio web</h1>
       <div className="mb-3">
         <label className="form-label">Peso (en kg):</label>
@@ -64,8 +66,45 @@ const Home = () => {
             <Card.Text>{recommendation}</Card.Text>
           </Card.Body>
         </Card>
-      )}
+      )} 
+       <div className="container">
+        <div className="row">
+            <div className="col-md-6">
+            <div className="card mb-3">
+                <img
+                src="https://cdn.pixabay.com/photo/2017/08/06/12/52/woman-2592247_1280.jpg"
+                alt="Imagen 2"
+                className="card-img-top"
+                style={{ maxWidth: '100%', height: '350px' }}
+                />
+                <div className="card-body">
+                <h5 className="card-title">Problemática</h5>
+                <p className="card-text">
+                La importancia del ejercicio va más allá de los beneficios físicos y mentales individuales, ya que tiene un impacto positivo en la sociedad en general. La promoción de estilos de vida activos puede reducir la carga de enfermedades crónicas, disminuir los costos de atención médica y fomentar comunidades más saludables y activas. En resumen, la incorporación regular de actividad física en la rutina diaria es esencial para alcanzar y mantener un óptimo estado de salud a nivel personal y comunitario.
+                </p>
+                </div>
+            </div>
+            </div>
+            <div className="col-md-6">
+            <div className="card mb-3">
+                <img
+                src="https://media.istockphoto.com/id/1433432507/es/foto/alimentaci%C3%B3n-saludable-plato-con-comida-vegana-o-vegetariana-en-manos-de-mujer-dieta-saludable.jpg?s=612x612&w=0&k=20&c=KQaj9U__Z-7dQODXbv72v3N0yua2NPXf487uc0Xrxvw="
+                alt="Imagen 2"
+                className="card-img-top"
+                style={{ maxWidth: '100%', height: '350px' }}
+                />
+                <div className="card-body">
+                <h5 className="card-title">Problemática</h5>
+                <p className="card-text">
+                La nutrición desempeña un papel fundamental en el mantenimiento de la salud y el bienestar humano. Una alimentación equilibrada proporciona al cuerpo los nutrientes esenciales, como vitaminas, minerales, proteínas, grasas y carbohidratos, necesarios para el funcionamiento óptimo de los sistemas biológicos. Además, una dieta adecuada contribuye a prevenir enfermedades crónicas, fortalece el sistema inmunológico y favorece un desarrollo físico y mental saludable a lo largo de todas las etapas de la vida.
+                </p>
+                </div>
+            </div>
+            </div>
+           </div>
+           </div>
     </div>
+    
   );
 };
 
